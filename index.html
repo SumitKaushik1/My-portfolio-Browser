@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sumit Kaushik Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+ <style>
+    /* Notification bar styles */
+    #notification-bar {
+      position: fixed;
+      top: -100px; /* Initially hidden */
+      left: 0;
+      width: 100%;
+      background-color: #4CAF50; /* Green background */
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      z-index: 1000;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: top 0.5s ease; /* Smooth slide animation */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    /* Bar content styling */
+    #notification-bar span {
+      flex-grow: 1;
+      font-size: 16px;
+    }
+
+    /* Button styles for download and close */
+    #download-btn, #close-btn {
+      background-color: #1C8F1D;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    /* Close button styling */
+    #close-btn {
+      background-color: transparent;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #download-btn:hover {
+      background-color: #167A16;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      #notification-bar {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      #download-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+      }
+
+      #close-btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+
+
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	 
+  <!-- Notification Bar -->
+  <div id="notification-bar">
+    <span>Download our app for a better experience!</span>
+    <button id="download-btn">Download</button>
+    <button id="close-btn">&times;</button> <!-- Close button -->
+  </div>
+
+
+  <script>
+    // Display the notification bar when the page loads
+    window.onload = function() {
+      const notificationBar = document.getElementById('notification-bar');
+      const downloadButton = document.getElementById('download-btn');
+      const closeButton = document.getElementById('close-btn');
+
+      // Slide down the notification bar
+      notificationBar.style.top = '0px';
+
+      // Add click event listener for the "Download" button
+      downloadButton.addEventListener('click', function () {
+        const apkUrl = 'downloads/your-app.apk';  // Path to APK file on your server
+
+        // Trigger the APK download
+        const anchor = document.createElement('a');
+        anchor.href = apkUrl;
+        anchor.download = 'your-app.apk'; // Optional: set a custom file name
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+      });
+
+      // Add click event listener for the "Close" button
+      closeButton.addEventListener('click', function () {
+        notificationBar.style.top = '-100px'; // Slide the notification bar up (hide it)
+      });
+    };
+  </script>
+
+
+
+
+  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sumit Kaushik</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_11.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Sumit Kaushik</span></h1>
+
+						<!-- Element to contain animated typing -->
+					<!--	<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'YouTuber  ',
+						'Teacher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script> >
+
+						<br>
+						<br> -->
+			            <h2>Fresher</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p>
+						   <a href="#" class="btn btn-primary py-3 px-4">My Works</a> 
+						   <!-- <a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a> -->
+							
+						</p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-mee.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<!--<p><span class="title-s">Name: </span> <span>Sumit Kaushik</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p> -->
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<!--<span>SQL</span> <span class="pull-right">95%</span> -->
+								    <span>SQL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<!--<span>PYTHON</span> <span class="pull-right">85%</span>-->
+									<span>JAVA</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Functional Testing</span> <span class="pull-right">90%</span>
+									<!--<span>Data Visualization</span> <span class="pull-right">90%</span>-->
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+								 <!--	<span>Statistical Analysis</span> <span class="pull-right">85%</span> -->
+									<span>API Testing</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<!--<span>Machine Learning</span> <span class="pull-right">80%</span>-->
+								    <span>Database Testing</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								
+								
+								<!--<p>With over 5 years of comprehensive experience in the field of data science & analytics, accompanied by a bachelor's degree in engineering. 
+									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
+									Demonstrated success in leading impactful projects and providing effective mentorship.</p> -->
+								<p>
+									With a a post-graduation diploma in 
+									Advanced Computing and  Bachelor's degree in Electrical Engineering, I am a fresh graduate eager to embark on a career in the field of 
+									technology. Proficient in testing methodologies, I possess a solid foundation in 
+									engineering principles and advanced computing concepts. Excited to apply my skills and 
+									knowledge to contribute effectively to impactful projects and further develop my 
+									expertise in testing and software quality assurance.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<!--<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
+									<li class="d-flex"><span>Profile:</span> <span> Manual & Automation Testing</span></li>
+									<!-- <li class="d-flex"><span>Domain:</span> NGINX<span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>Post Graduate Diploma in Advance Computing &amp; Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<!--<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
+									<li class="d-flex"><span>Frameworks:</span> <span>Selenium WebDriver(for Java) , RestAssured (for Java) , Cucumber(for Java)  &amp;TestNG </span></li>
+									<li class="d-flex"><span>Other Frameworks:</span> <span> AssertJ (for Java), Hamcrest (for Java), Allure Framework, ReportNG &amp; ExtentReports</span></li>
+									<li class="d-flex"><span>Tools:</span> <span> Postman, Zephyr, JIRA, &amp; Excel</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud(AWS), Docker, Kubernetes, Apache &amp; Confluence</span></li>
+									<!--<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>-->
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<!--<span class="number" data-number="30">0</span> <span>+</span> -->
+									<span class="number" data-number="7">0</span> <span></span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="#" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+          <!--  <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p> -->
+          <p>With recent certifications in automation and manual testing (2023), a post-graduate diploma in testing (2022), and a BTech degree (2020), I offer a solid foundation and up-to-date expertise in software testing. Eager to contribute to the IT industry, I'm passionate about ensuring top-quality standards through technology.</p>
+		  </div>
+        </div>
+
+		<div class="row">
+			<!--<h1 class="big-4">Experience</h1> -->
+			<h1 class="big-4">Certifications</h1> 
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				
+				<!--
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-Present</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">Merkle</span>
+						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
+							<ul>
+								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
+								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
+								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">iQuanti</span>
+						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
+							<ul>
+								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
+								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div> -->
+				
+				<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2023-Present</span>
+					<h2>Automation Testing </h2>
+					<span class="position">The Testing Academy</span>
+							<p class="mt-4">
+							
+
+                                 The course offers a comprehensive exploration of automation testing,
+								 encompassing software testing basics, SDLC models, API testing, Java concepts, 
+								 Selenium for web automation, and essential tools like Git, SQL, Jenkins, along 
+								 with a brief overview of mobile testing basics.
+						
+							</p>
+                           <br>
+						   <span class="position">Key Skills:</span>
+						
+								<ul class="mt-4">
+    <li>Software testing fundamentals and SDLC understanding</li><li>Various testing levels (unit, integration, system)</li><li>Test case and test plan design</li><li>Agile methodologies and project management with JIRA</li><li>API testing with Postman and Rest Assured</li><li>Automation scripting in Java</li><li>Automation frameworks like Selenium with TestNG and Cucumber BDD</li><li>Version control with Git</li><li>Database testing using SQL</li><li>Continuous integration with Jenkins</li><li>Basic mobile testing knowledge with Appium</li><li>Strong problem-solving abilities in real-world scenarios</li>
+</ul>
+
+				      </div>
+               </div>
+			   <div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2023-Present</span>
+					<h2>Manual Testing </h2>
+					<span class="position">The Testing Academy</span>
+							<p class="mt-4">
+									
+                                  My journey through a comprehensive manual testing certification program has been 
+								  enriching. This immersive experience has not only broadened my understanding of 
+								  software testing but has also equipped me with practical skills crucial for the field.
+								  I dedicated considerable time to exploring foundational concepts like software testing 
+								  basics and delving into the intricacies of SDLC methodologies. Moreover, I focused on 
+								  mastering test design techniques, ensuring that I can create robust test cases tailored 
+								  to different scenarios. With a thorough exploration of various testing methodologies, 
+								  including unit, integration, system, and functional testing, I'm well-prepared to tackle
+								  diverse challenges in software quality assurance.
+						
+							</p>
+                           <br>
+						   <span class="position">Key Skills:</span>
+						
+								<ul class="mt-4">
+								       
+									<li>Software testing basics</li>
+									<li>SDLC methodologies</li>
+									<li>Test design techniques</li>
+									<li>Unit, integration, system, and functional testing</li>
+									<li>Version control using Git</li>
+									<li>Project management with GitHub</li>
+									<li>API testing using Postman</li>
+									<li>Industry trends analysis</li>
+								   
+								</ul>
+				      </div>
+               </div>
+
+				
+				
+				
+				
+				
+				
+				
+			</div>
+             
+		<br>
+		<br>
+		
+		<div class="row">
+			<h1 class="big-4">Achievements</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021</span>
+						<h2>GATE Achievement</h2>
+						<span class="position">Indian Institute of Technology (IIT) Bombay</span>
+						<p class="mt-4">
+Administered annually by IIT Bombay, GATE is a prestigious examination assessing the aptitude and subject knowledge of
+ engineering graduates. Serving as a gateway to postgraduate programs and employment opportunities in leading institutions
+ and public sector undertakings across India, it holds significant importance in academic and professional circles. 
+ GATE plays a pivotal role in shaping the career paths of aspiring engineers nationwide.
+							<ul>
+								<li>Attained an outstanding 94th percentile in the GATE (Graduate Aptitude Test in Engineering) examination for Electrical Engineering, demonstrating strong subject proficiency and problem-solving abilities.</li>
+								<br>
+								<li>Offered admission to the Master of Technology (M.Tech) program in Integrated Power Systems at NIT Nagpur, recognizing academic excellence and specialized knowledge in Electrical Engineering.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				
+					<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2022</span>
+						<h2>C-CAT Achievement</h2>
+						<span class="position">Centre for Development of Advanced Computing Pune</span>
+						<p class="mt-4">The C-CAT exam, conducted by CDAC, is an entrance test for admission to various postgraduate diploma courses in IT and related fields. It evaluates candidates' knowledge in computer programming, algorithms, networks, and software engineering, offering opportunities for career advancement in the IT industry.
+							<ul>
+								<li>Secured admission to the highly competitive PG-DAC program at the prestigious Centre for Development of Advanced Computing (CDAC) Pune, based on exceptional performance in the Common Admission Test (C-CAT), attaining an impressive 97th percentile.</li>
+								<br>
+								<li>Selected for enrollment in the advanced computing program, which offers comprehensive training in areas such as computer programming, algorithms, software engineering, and emerging technologies.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				
+
+				
+		</div>
+		
+		
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<!--<span class="date">2014-2018</span>-->
+						<span class="date">2022</span>
+    					<!--<h2>Bachelor of Engineering</h2> -->
+						<h2>Post Graduate Diploma in Advanced Computing</h2>
+    					<!--<span class="position">Visvesvaraya Technological University</span>-->
+						<span> Centre for Development of Advanced Computing, Pune</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+						
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<!--<span class="date">2012-2013</span>-->
+						<span class="date">2016-2020</span>
+    					<!--<h2>Higher Secondary School</h2> -->
+						
+						<h2>Bachelor of Technology</h2>
+						
+    					<!--<span class="position">Army Public School</span>-->
+						<span>KIET : Krishna Institute of Engineering & Technology,
+ Ghaziabad</span>
+						
+						
+    					<p class="mt-4">Grade: First class distinction.</p>
+	                     
+						
+						 
+
+
+    				</div>
+				</div>
+    		</div>
+         
+
+
+    	  
+			 <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+		   
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+              <!--<p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>-->
+			<p>Below are the sample Testing projects using Java, SQL, and various testing tools.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+             <!--<a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">-->
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+
+			  </a>
+              <div class="text mt-3 float-right d-block">
+
+               <!-- <h3 class="heading"><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a></h3>-->
+                 <h3 class="heading"><a href="#">Digital Music Store Data Analysis using SQL</a></h3>
+				<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+		  
+		  
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <!--<a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">-->
+               <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+			  </a>
+              <div class="text mt-3 float-right d-block">
+
+                <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>-->
+                <h3 class="heading"><a href="#">Data Analysis using Python Project for Beginners</a></h3>
+
+				<p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+              </div>
+            </div>
+          </div>
+		  
+		     <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <!--<a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">-->
+              <!-- <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"> -->
+			  <a href="#" class="block-20 zoom-effect" style="background-image: url('images/Rest_Assured_cucumber.png');">
+			  </a>
+              <div class="text mt-3 float-right d-block">
+
+                <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>-->
+               <!-- <h3 class="heading"><a href="https://github.com/SumitKaushik1/RestFullBooker-API-Testing-Cucumber-Framework-Project.git">API Testing of Restful Booker with Cucumber Framework and RestAssured Library</a></h3> -->
+                  
+				  <h3 class="heading"><a href="#">API Testing of Restful Booker with Cucumber Framework and RestAssured Library</a></h3>
+				<p> Performed API testing of the Restful Booker application  using the Cucumber framework combined with the RestAssured library.</p>
+              </div>
+            </div>
+          </div>
+		  
+		  
+         
+       
+
+
+	   </div>
+	<br>
+			
+	
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+		
+		     	<div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+             <!-- <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">-->
+              <!-- <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"> -->
+			    <a href="#" class="block-20 zoom-effect" style="background-image: url('images/manual_api_testing.png');">
+			  </a>
+              <div class="text mt-3 float-right d-block">
+
+                <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>-->
+               <!-- <h3 class="heading"><a href="#">Power BI Sales dashboard Project for Beginners</a></h3> -->
+				<h3 class="heading"><a href="#">Manual API Testing with GitHub and Restful Booker APIs</a></h3>
+               
+			  <!-- <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> -->
+			   <p>conducted manual API testing with the GitHub REST API and Restful Booker REST API, verifying key 
+			   endpoints for functionality and response accuracy.<p/>
+              </div>
+            </div>
+          </div>
+		
+		
+		
+		
+		     
+			
+			
+			
+			
+			
+			
+			
+		<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<!--<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">-->
+				<!--<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"> -->
+                    <a href="#" class="block-20 zoom-effect" style="max-width: 94%; max-height: 100%; display: block; transition: transform 0.3s;  background-image: url('images/manual_ui_testing2.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>-->
+				 <!-- <h3 class="heading"><a href="#">Sales Forecast- Time Series Forecasting</a></h3> -->
+                   <h3 class="heading"><a href="#">Manual UI Testing Project: VWO Login & Opencart Registration Applications</a></h3>
+				  <p>Thorough UI testing of VWO login and Opencart registration, employing diverse tools and methods for comprehensive evaluation</p>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<!--<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">-->
+			     <a href="#" class="block-20 zoom-effect" style="background-image: url('images/Databaset_testing.jpg');">
+
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>-->
+				  <!--<h3 class="heading"><a href="#">Customer Segmentation using clustering model</a></h3>-->
+                  <h3 class="heading"><a href="#">Overview of Database Testing</a></h3>
+				  
+	              <p>
+                   Database testing validates data integrity, performance, and functionality, ensuring accurate handling 
+				   and compliance with requirements.</p>
+				 <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
+				</div>
+			  </div>
+			</div>
+	
+			
+			
+			
+		 </div>
+		 <br>
+		 <div class="row d-flex justify-content-center">  
+		
+		     
+			
+			
+			
+	
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<!--<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">-->
+			     <a href="#" class="block-20 zoom-effect" style="background-image: url('images/crm.jpg');">
+
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <!--<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>-->
+				  <!--<h3 class="heading"><a href="#">Customer Segmentation using clustering model</a></h3>-->
+                  <h3 class="heading"><a href="#">Customer Relationship Management application using java, jsp, javabean and mysql</a></h3>
+				  
+	              <p>A Java, Java Bean and JSP-based CRM system for saving and updating salesman, product, and customer details.</p>
+				 <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
+				</div>
+			  </div>
+			</div>
+		 </div>
+		 
+		 
+		 
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+	  <!--
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+		-->
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="#" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<!--<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>-->
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <!--<p>Bengaluru, India</p>-->
+				<p>Agra, Uttar Pradesh, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <!-- <p><a href="tel://0101010101">+ 0 101 0101 101</a></p>-->
+				 <p><a href="#"></a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	           <!-- <p><a href="mailto:info@yoursite.com">conctact@domainname.com</a></p>-->
+				 <p><a href="mailto:pritam.2581996@gmail.com">pritam.2581996@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/Ud8ofMCjWie2XWEh8" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				    <!--<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>-->
+
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					 <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>-->
+					  <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>  
+					  <!--<li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>-->
+					 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+					
+					  <!--<li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>-->
+                      <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				
+					<!--<li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
+					 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
