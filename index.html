@@ -209,12 +209,12 @@
 
       // Add click event listener for the "Download" button
       downloadButton.addEventListener('click', function () {
-        const apkUrl = 'downloads/your-app.apk';  // Path to APK file on your server
+        const apkUrl = 'downloads/app-debug.apk';  // Path to APK file on your server
 
         // Trigger the APK download
         const anchor = document.createElement('a');
         anchor.href = apkUrl;
-        anchor.download = 'your-app.apk'; // Optional: set a custom file name
+        anchor.download = 'app-debug.apk'; // Optional: set a custom file name
         document.body.appendChild(anchor);
         anchor.click();
         document.body.removeChild(anchor);
